@@ -156,6 +156,3 @@ set foldlevel=99 " Open all folds
 " https://stackoverflow.com/a/38258720
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
-
-" IndentLine
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
