@@ -22,15 +22,22 @@ git clone https://github.com/huwan/nvim.git ~/.config/nvim
 
 [init.vim](init.vim) is configured to automatically install missing plugins on startup, or you can reload `init.vim` and execute `:PlugInstall` mannually after install new plugin(s).
 
+NOTE: The following error message will be displayed at first nvim startup. Just ignore it. vim-anyfold plugin will be automatically installed and fix this issue.
+```
+Error detected while processing FileType Autocommands for "*":
+E492: Not an editor command: AnyFoldActivate
+Press ENTER or type command to continue
+```
+
 ## Launch nvim
 Launch `nvim`, the plugin will be ready for use.
 
 ## (Optional) Set vim alternative 
-Add alias in .bashrc or .bash_aliases
+Add alias in .bashrc, .bash_aliases, or .bash_profile.
 
 ```
-alias vi=`nvim`
-alias vim=`nvim`
+alias vi='nvim'
+alias vim='nvim'
 ```
 
 Or add vim alternative for nvim
