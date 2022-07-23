@@ -46,26 +46,17 @@ set backupdir=~/.vim/backup//
 " mkdir -p ~/.vim/swapfiles
 set directory=~/.vim/swapfiles//
 
-" autocomplete braces
-" inoremap " ""<left>
-" inoremap ' ''<left>
-" inoremap ( ()<left>
-" inoremap [ []<left>
-" inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
-" Format code file using astyle with "="
+" Format code file using astyle with =
+" http://astyle.sourceforge.net/astyle.html
+" astyle options:
+" --style=kr / -A3, --indent=spaces=4 / -s4, --pad-oper / -p, --pad-comma / -xg
+" --pad-header / -H, --unpad-paren / -U, --align-pointer=type / -k1, -align-reference=name / -W3
+" --attach-return-type / -xf, -attach-return-type-decl / -xh, --indent-col1-comments / -Y
 fun! CPPFormatSettings()
-  " astyle options:
-  " --style=1tbs --indent=spaces=4 --break-blocks --pad-oper --pad-comma
-  " --pad-header --unpad-paren --delete-empty-lines --align-pointer=type
-  " --align-reference=name --attach-return-type --attach-return-type-decl
-  " set equalprg=astyle\ -A10 -s4 -fp -xg -H -U -xe  -k1 -W3 -xf -xh
-
-  " setlocal equalprg=clang-format\ -style=google
-  " setlocal equalprg=astyle\ -A10s4fpxgHUxek1W3xfxh
-  setlocal equalprg=astyle\ -A10s4fpxgHUk1W3xfxh " remove delete empty lines
+  setlocal equalprg=astyle\ -A3s4pxgHUk1W3xfxhY
 endfun
 autocmd FileType c,cpp,h,hpp call CPPFormatSettings()
 
