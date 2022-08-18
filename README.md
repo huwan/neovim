@@ -14,6 +14,12 @@ Put [init.vim](init.vim) in `~/.config/nvim`, or simply clone this repo:
 git clone https://github.com/huwan/nvim.git ~/.config/nvim
 ```
 
+Create backup and swap directories
+```
+mkdir -p ~/.vim/backup
+mkdir -p ~/.vim/swapfiles
+```
+
 ## Install the Vim-plug Plugin Manager
 
 ```
