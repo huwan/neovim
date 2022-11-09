@@ -85,6 +85,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'majutsushi/tagbar', { 'on':  'TagbarToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'github/copilot.vim'
+Plug 'lambdalisue/suda.vim'
 call plug#end()
 
 " Automatically install missing plugins on startup
@@ -147,3 +148,6 @@ set foldlevel=99 " Open all folds
 " https://stackoverflow.com/a/38258720
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
+
+" suda
+let g:suda_smart_edit = 1
