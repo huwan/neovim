@@ -4,6 +4,20 @@ init.vim for neovim
 ## Install Neovim
 Install neovim: https://github.com/neovim/neovim/wiki/Installing-Neovim
 
+- Ubuntu
+
+```
+sudo apt install neovim
+```
+- macOS
+
+```
+brew install neovim
+```
+- Others (e.g., CentOS 7)
+
+  Download [latest stable release](https://github.com/neovim/neovim/releases/latest), extract tarball, and move `nvim-linux64/bin/nvim` to `/usr/local/bin/`.
+
 To start Neovim, run `nvim` (not `neovim`).
 
 
@@ -39,18 +53,19 @@ Press ENTER or type command to continue
 Launch `nvim`, the plugin will be ready for use.
 
 ## (Optional) Set vim alternative 
-Add alias in .bashrc, .bash_aliases, or .bash_profile.
 
-```
-alias vi='nvim'
-alias vim='nvim'
-```
-
-Or add vim alternative for nvim
+If you want to use Neovim for some (or all) of the editor alternatives, use the following commands:
 
 ```
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
 sudo update-alternatives --config vi
 sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
 sudo update-alternatives --config vim
+```
+
+Or add alias in .bashrc, .bash_aliases, or .bash_profile.
+
+```
+alias vi='nvim'
+alias vim='nvim'
 ```
