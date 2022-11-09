@@ -43,6 +43,7 @@ mkdir -p ~/.vim/swapfiles
 [init.vim](init.vim) is configured to automatically install missing plugins on startup, or you can reload `init.vim` and execute `:PlugInstall` mannually after install new plugin(s).
 
 NOTE: The following error message will be displayed at first nvim startup. Just ignore it. vim-anyfold plugin will be automatically installed and fix this issue.
+
 ```
 Error detected while processing FileType Autocommands for "*":
 E492: Not an editor command: AnyFoldActivate
@@ -52,7 +53,7 @@ Press ENTER or type command to continue
 ## Launch nvim
 Launch `nvim`, the plugin will be ready for use.
 
-## (Optional) Set vim alternative 
+### Set vim alternative (optional)
 
 If you want to use Neovim for some (or all) of the editor alternatives, use the following commands:
 
@@ -69,3 +70,23 @@ Or add alias in .bashrc, .bash_aliases, or .bash_profile.
 alias vi='nvim'
 alias vim='nvim'
 ```
+
+## Plugins
+
+Several plugins are added to this configuration file, they will be loaded automatically after initialization. Add or remove plugins for your own use.
+
+Note 1: `ctags` and `cscope` are required for `autotags` plugin and `cscope_maps` plugin. 
+
+Ubuntu users can install them via apt:
+
+```
+sudo apt-get install exuberant-ctags cscope
+```
+
+### Frequently used keyboard shortcuts
+- `F2`: Trim trailing whitespace
+- `F4`: generate ctags and cscope database
+- `gcc`: comment out current line
+- `ctrl` + `c`: find functions calling the function in cscope
+- `,` + `n`: toggle (absolute) line numbers
+- `,` + `r`: toggle relative line numbers
