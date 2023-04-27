@@ -141,7 +141,7 @@ nnoremap <C-c> :cs find c <C-R>=expand("<cword>")<CR><CR>
 let g:autotags_ctags_opts = "--c++-kinds=+p --fields=+iaS --extra=+q --extra=+f"
 
 " Fold
-autocmd Filetype * AnyFoldActivate
+autocmd Filetype c,cpp,h,hpp AnyFoldActivate
 set foldlevel=99 " Open all folds
 
 " Paste mode
