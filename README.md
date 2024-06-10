@@ -75,7 +75,7 @@ alias vim='nvim'
 
 Several plugins are added to this configuration file, they will be loaded automatically after initialization. Add or remove plugins for your own use.
 
-Note 1: `ctags` and `cscope` are required for `autotags` plugin and `cscope_maps` plugin. 
+Note 1: `ctags` and `cscope` are required for `autotags` plugin and `cscope_maps` plugin.
 
 Ubuntu users can install them via apt:
 
