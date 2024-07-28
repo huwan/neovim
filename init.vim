@@ -76,7 +76,7 @@ Plug 'mg979/vim-visual-multi'
 Plug 'terryma/vim-expand-region'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
-Plug 'pseewald/vim-anyfold'
+" Plug 'pseewald/vim-anyfold', { 'on': 'AnyFoldActivate' }
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-scripts/a.vim'
@@ -141,7 +141,7 @@ nnoremap <C-c> :cs find c <C-R>=expand("<cword>")<CR><CR>
 let g:autotags_ctags_opts = "--c++-kinds=+p --fields=+iaS --extra=+q --extra=+f"
 
 " Fold
-autocmd Filetype c,cpp,h,hpp AnyFoldActivate
+" autocmd Filetype c,cpp,cxx,h,hpp AnyFoldActivate
 set foldlevel=99 " Open all folds
 
 " Paste mode
@@ -151,3 +151,6 @@ let &t_EI .= "\<Esc>[?2004l"
 
 " suda
 let g:suda_smart_edit = 1
+
+" IndentLine
+nnoremap <Leader>il :IndentLinesToggle<CR>
